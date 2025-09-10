@@ -1,0 +1,262 @@
+:root {
+    --primary-color: #009933;
+    --secondary-color: #ffcc00;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+    --card-bg: #ffffff;
+    --shadow: 0 2px 8px rgba(0,0,0,0.1);
+    --error-color: #e74c3c;
+    --success-color: #2ecc71;
+}
+
+.dark-theme {
+    --primary-color: #00cc44;
+    --secondary-color: #ffdd33;
+    --text-color: #f9f9f9;
+    --background-color: #121212;
+    --card-bg: #1e1e1e;
+    --shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), #006622);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+}
+
+#theme-toggle-btn {
+    background-color: var(--secondary-color);
+    color: #333;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#theme-toggle-btn:hover {
+    background-color: #ffd633;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem 3rem;
+}
+
+.interactive-section, .form-section {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow);
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Counter styles */
+.counter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.counter-container button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#counter-value {
+    font-size: 2rem;
+    margin: 0 1.5rem;
+    min-width: 60px;
+    text-align: center;
+    font-weight: bold;
+}
+
+#counter-message {
+    text-align: center;
+    font-style: italic;
+    color: var(--primary-color);
+    min-height: 1.5rem;
+}
+
+/* FAQ styles */
+.faq-item {
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.faq-question {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+.dark-theme .faq-question {
+    background-color: #2a2a2a;
+}
+
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer.active {
+    padding: 1rem;
+    max-height: 300px;
+}
+
+.faq-answer p {
+    margin-bottom: 0;
+}
+
+.toggle-icon {
+    font-weight: bold;
+}
+
+/* Form styles */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    width: auto;
+    margin-right: 0.5rem;
+}
+
+.error-message {
+    color: var(--error-color);
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    display: block;
+    min-height: 1.25rem;
+}
+
+input.error, select.error {
+    border-color: var(--error-color);
+}
+
+#submit-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+#submit-btn:hover {
+    background-color: #00802b;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+    display: none;
+}
+
+.dark-theme .success-message {
+    background-color: #1e4620;
+    color: #c8e6c9;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #333;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 1.5rem 1rem;
+    }
+    
+    .theme-toggle {
+        position: static;
+        text-align: right;
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .interactive-section, .form-section {
+        padding: 1rem;
+    }
+}

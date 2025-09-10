@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll in Kenyan Tech Programme</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Kenyan Digital Skills Programme</h1>
+        <p>Empowering the next generation of Kenyan tech innovators</p>
+    </header>
+
+    <!-- Dark/Light Mode Toggle -->
+    <div class="theme-toggle">
+        <button id="theme-toggle-btn">🌙 Dark Mode</button>
+    </div>
+
+    <main>
+        <!-- Counter Game Section -->
+        <section class="interactive-section">
+            <h2>Programme Interest Counter</h2>
+            <p>How many people have you told about this programme?</p>
+            <div class="counter-container">
+                <button id="decrement">-</button>
+                <span id="counter-value">0</span>
+                <button id="increment">+</button>
+            </div>
+            <p id="counter-message"></p>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="interactive-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">What are the eligibility requirements? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>Applicants must be Kenyan citizens aged 18-35 with a high school diploma. Basic computer skills are recommended but not required.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How long is the programme? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>The programme runs for 6 months, including 3 months of intensive training and 3 months of internship placement.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Is there any cost involved? <span class="toggle-icon">+</span></div>
+                <div class="faq-answer">
+                    <p>The programme is fully funded for selected candidates through a partnership with the Kenyan Ministry of Education and technology partners.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enrollment Form -->
+        <section class="form-section">
+            <h2>Enrollment Application</h2>
+            <form id="enrollment-form">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name">
+                    <span class="error-message" id="name-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email">
+                    <span class="error-message" id="email-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g., 07XX XXX XXX">
+                    <span class="error-message" id="phone-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="county">County of Residence:</label>
+                    <select id="county" name="county">
+                        <option value="">Select your county</option>
+                        <option value="nairobi">Nairobi</option>
+                        <option value="mombasa">Mombasa</option>
+                        <option value="kisumu">Kisumu</option>
+                        <option value="nakuru">Nakuru</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <span class="error-message" id="county-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Create Password:</label>
+                    <input type="password" id="password" name="password">
+                    <span class="error-message" id="password-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password">
+                    <span class="error-message" id="confirm-password-error"></span>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" name="terms">
+                    <label for="terms">I agree to the terms and conditions</label>
+                    <span class="error-message" id="terms-error"></span>
+                </div>
+
+                <button type="submit" id="submit-btn">Submit Application</button>
+            </form>
+
+            <div id="success-message" class="success-message">
+                <h3>Application Submitted Successfully!</h3>
+                <p>Thank you for applying to the Kenyan Digital Skills Programme. We'll contact you shortly.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Kenyan Digital Skills Programme. Supported by the Ministry of Education.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
